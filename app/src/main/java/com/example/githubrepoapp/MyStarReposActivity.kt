@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.githubrepoapp.adapter.RepoAdapter
 import com.example.githubrepoapp.model.Repo
-import com.example.githubrepoapp.networkUtils.RepoGithubClient
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_my_star_repos.*
 
 class MyStarReposActivity : AppCompatActivity() {
@@ -27,18 +24,12 @@ class MyStarReposActivity : AppCompatActivity() {
         repoList.add(Repo("ProjectAndroid_4", "Example android project design pattern MVP using Kotlin", "Kotlin"))
         repoList.add(Repo("ProjectAndroid_5", "android project design pattern MVVM using kotlin", "Kotlin"))*/
 
-        getStarredRepo()
+        getStaredRepo()
 
     }
 
-    fun getStarredRepo(){
-        RepoGithubClient.getRepoGithubService().getStarredRepo("RachmanForniandi")
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe {
-                    it->
-                repoAdapter.addReposDummy(it)
-            }
+    fun getStaredRepo(){
+
     }
 
 }
