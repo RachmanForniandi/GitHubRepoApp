@@ -1,11 +1,10 @@
-package com.example.githubrepoapp.model
+package com.example.githubrepoapp.modelDAO
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import io.reactivex.Observable
-import java.util.*
 import kotlin.collections.ArrayList
 
 @Dao

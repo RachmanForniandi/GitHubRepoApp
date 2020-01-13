@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.githubrepoapp.R
-import com.example.githubrepoapp.model.Repo
+import com.example.githubrepoapp.modelDAO.Repo
 import kotlinx.android.synthetic.main.item_starred_repo.view.*
 
 class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoHolder>()  {

@@ -1,8 +1,7 @@
 package com.example.githubrepoapp.repository
 
-import com.example.githubrepoapp.model.Repo
+import com.example.githubrepoapp.modelDAO.Repo
 import io.reactivex.Observable
-import java.util.*
 import kotlin.collections.ArrayList
 
 interface RepoDataSource {

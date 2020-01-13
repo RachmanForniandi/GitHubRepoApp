@@ -1,6 +1,6 @@
 package com.example.githubrepoapp.networkUtils
 
-import com.example.githubrepoapp.model.Repo
+import com.example.githubrepoapp.modelDAO.Repo
 import retrofit2.http.GET
 import retrofit2.http.Path
 import io.reactivex.Observable

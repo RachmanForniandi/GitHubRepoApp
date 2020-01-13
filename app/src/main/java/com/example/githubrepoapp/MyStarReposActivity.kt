@@ -3,7 +3,7 @@ package com.example.githubrepoapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.githubrepoapp.adapter.RepoAdapter
-import com.example.githubrepoapp.model.Repo
+import com.example.githubrepoapp.modelDAO.Repo
 import com.example.githubrepoapp.networkUtils.RepoGithubClient
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
