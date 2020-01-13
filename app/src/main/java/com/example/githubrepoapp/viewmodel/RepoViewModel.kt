@@ -1,8 +1,7 @@
 package com.example.githubrepoapp.viewmodel
 
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
-import com.example.githubrepoapp.model.Repo
+import com.example.githubrepoapp.modelDAO.Repo
 import io.reactivex.Observable
 
 class RepoViewModel: ViewModel() {

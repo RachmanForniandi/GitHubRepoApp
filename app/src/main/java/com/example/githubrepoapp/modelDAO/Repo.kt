@@ -1,10 +1,9 @@
-package com.example.githubrepoapp.model
+package com.example.githubrepoapp.modelDAO
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import org.intellij.lang.annotations.Language
 
 @Entity(tableName = "repo")
 data class Repo(
