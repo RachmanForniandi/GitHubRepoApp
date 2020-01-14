@@ -5,11 +5,13 @@ import io.reactivex.Observable
 
 class RepoRepository(val remoteResource:RepoRemoteResource,val  localResource:RepoLocalSource) :RepoDataSource {
     override fun fetchRepos(username: String): Observable<ArrayList<Repo>> {
-        return Observable.empty()
+        //return Observable.empty()
+        return Observable.concatArray(localResource.fetchRepos(username),remoteResource.fetchRepos(username))
+            .doOnNext{repos -> saveRepos(repos)}
     }
 
     override fun saveRepos(repos: ArrayList<Repo>) {
-
+        Observable.fromCallable { localResource.saveRepos(repos) }
     }
 
 }
