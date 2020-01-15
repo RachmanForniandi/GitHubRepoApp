@@ -13,9 +13,9 @@ data class Repo(
                 @ColumnInfo(name = "name")
                 @SerializedName("name")val name:String,
                 @ColumnInfo(name = "description")
-                @SerializedName("description")val desc:String,
+                @SerializedName("description")val desc:String?,
                 @ColumnInfo(name = "language")
-                @SerializedName("language")val lang: String,
+                @SerializedName("language")val lang: String?,
                 @ColumnInfo(name = "stargazers_count")
                 @SerializedName("stargazers_count")val starCount: Int
 )

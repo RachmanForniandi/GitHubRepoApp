@@ -8,5 +8,5 @@ import kotlin.collections.ArrayList
 
 interface RepoService {
     @GET("users/{user}/starred")
-    fun getStarredRepo(@Path("user")username:String):Observable<ArrayList<Repo>>
+    fun getStarredRepo(@Path("user")username:String):Observable<List<Repo>>
 }

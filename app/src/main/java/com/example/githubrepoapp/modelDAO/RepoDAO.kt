@@ -10,8 +10,8 @@ import kotlin.collections.ArrayList
 @Dao
 interface RepoDAO {
     @Query("SELECT * FROM repo")
-    fun fetchAllMyRepos():Observable<ArrayList<Repo>>
+    fun fetchAllMyRepos():List<Repo>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun saveAllStarRepos(repos:ArrayList<Repo>)
+    fun saveAllStarRepos(repos:List<Repo>)
 }

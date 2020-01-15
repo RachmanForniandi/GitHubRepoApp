@@ -6,6 +6,6 @@ import kotlin.collections.ArrayList
 
 interface RepoDataSource {
 
-    fun fetchRepos(username:String):Observable<ArrayList<Repo>>
-    fun saveRepos(repos:ArrayList<Repo>)
+    fun fetchRepos(username:String): Observable<List<Repo>>
+    fun saveRepos(repos:List<Repo>)
 }

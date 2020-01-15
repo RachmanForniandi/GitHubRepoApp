@@ -13,7 +13,7 @@ abstract class AppDatabase :RoomDatabase(){
         var INSTANCE:AppDatabase?= null
 
         fun getInstance(context: Context):AppDatabase?{
-            INSTANCE?.let { INSTANCE }?:kotlin.run {
+            INSTANCE?.let { INSTANCE }?:run {
                 INSTANCE = Room.databaseBuilder(context,AppDatabase::class.java,"repo.db").build()
             }
             return INSTANCE
