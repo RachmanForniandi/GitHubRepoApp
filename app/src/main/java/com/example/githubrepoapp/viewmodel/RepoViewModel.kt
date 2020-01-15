@@ -20,14 +20,19 @@ class RepoViewModel: ViewModel() {
     val repository = RepoRepository(RepoRemoteResource,RepoLocalSource)
 
     fun obtainStarRepos(username:String){
+        if (repoLiveData.value !=null){
+            return
+        }
         val repoDisposable = repository.fetchRepos(username)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{it-> repoLiveData.value =it}
+
         compositeDisposable.add(repoDisposable)
     }
 
     fun getLiveData():LiveData<List<Repo>> =repoLiveData
+
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
